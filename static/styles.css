@@ -1,0 +1,284 @@
+* {
+    box-sizing: border-box;
+}
+body, main {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Utility Classes */
+
+.inter {
+    font-family: 'Inter', sans-serif;
+}
+
+
+/* Head Section CSS */
+
+.head-section {
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5) ), url(images/movie-background.jpg) center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.navbar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Centers the navbar content horizontally */
+    align-items: center; /* Centers the navbar content vertically */
+    gap: 2rem; /* Adds space between the elements */
+    color: white;
+    max-width: 40rem;
+
+}
+
+
+
+.find-your-film-title,
+.my-watchlist-button {
+    font-weight: 800;
+    padding: 0;
+    margin: 0;
+}
+
+.find-your-film-title {
+    font-size: 2.5rem;
+}
+
+.my-watchlist-button {
+    font-size: 0.8rem;
+}
+
+.watchlist-link {
+    text-decoration: none;
+    color: white;
+}
+
+
+/* Search bar CSS */
+
+.search-section {
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar {
+    
+    margin-top: -1.5rem;
+    background-color: white;
+    border: 2px solid darkgray;
+    height: 3rem;
+    display: flex;
+    width: 100%;
+    max-width: 40rem;
+}
+
+.search-input-div {
+    width: 100%;
+}
+
+
+.search-input {
+    border: none;
+    padding: 0.5rem;
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px white inset;
+    box-shadow: 0 0 0px 1000px white inset;
+    -webkit-text-fill-color: black; /* Set the text color */
+}
+
+
+
+.search-input:focus {
+    outline: none;
+    
+}
+
+.input {
+    margin-left: 0.8rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.search-button-div {
+    background-color: gray;
+    height: 100%;
+    width: 50%;
+    display: flex;
+
+}
+
+.search-button {
+    margin: auto;
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: medium;
+    font-size: 1rem;
+    width: 100%;
+    color: white;
+}
+
+/* Movie Results Section */
+
+.movie-results {
+    
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.no-results-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #DFDDDD;
+}
+
+.no-response-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #747070d2;
+    font-size: 1.5rem;
+}
+
+#results-container {
+    width: 100%;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+.fa-film {
+    font-size: 10rem;
+}
+
+
+.movie-information-container {
+    margin-top: 3rem;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.movie-poster {
+    height: 100%;
+    width: 100%;
+}
+
+.movie-poster-div {
+    height: 17rem;
+
+}
+
+.movie-poster-div img {
+    width: 15rem;
+}
+
+.movie-info-div {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-icon-rating {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.title-icon-rating h3 {
+    font-weight: 900;
+}
+
+
+.title-icon-rating i {
+    color: gold;
+}
+
+.title-icon-rating p {
+    font-weight: normal;
+}
+
+
+.runtime-genre-watchlist {
+    display: flex;
+    gap: 2rem;
+    font-size: 12px;
+}
+
+#watchlist-btn {
+    border: none;
+    background: none;
+}
+
+.fa-plus {
+    cursor: pointer;
+}
+
+.watchlist-button-div {
+    display: flex;
+    align-items: center;
+}
+
+.movie-plot {
+    font-size: 14px;
+    color: #6B7280;
+}
+
+.movie-plot-div {
+    position: relative;
+    max-height: 150px; 
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.movie-plot-div.expanded {
+    max-height: none; 
+}
+
+.buttons-container {
+    display: none; 
+}
+
+.read-more-btn,
+.read-less-btn {
+    margin: 0;
+    padding: 0;
+    background: none;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.read-less-btn {
+    display: none;
+}
+
+.seperator {
+    margin-top: 4rem;
+}
