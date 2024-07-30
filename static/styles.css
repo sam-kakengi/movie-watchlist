@@ -238,6 +238,10 @@ input:-webkit-autofill:focus {
     cursor: pointer;
 }
 
+.fa-minus {
+    cursor: pointer;
+}
+
 .watchlist-button-div {
     display: flex;
     align-items: center;
@@ -281,4 +285,27 @@ input:-webkit-autofill:focus {
 
 .seperator {
     margin-top: 4rem;
+}
+
+/* Watchlist.html */
+
+.search-for-movies-link {
+    text-decoration: none;
+    color: white;
+}
+
+.watchlist-results-div {
+
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#my-watchlist-results {
+    width: 100%;
+    max-width: 40rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
