@@ -147,6 +147,7 @@ input:-webkit-autofill:focus {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-bottom: 5rem;
 }
 
 .no-results-div {
@@ -283,7 +284,7 @@ input:-webkit-autofill:focus {
     display: none;
 }
 
-.seperator {
+.separator {
     margin-top: 4rem;
 }
 
@@ -307,5 +308,13 @@ input:-webkit-autofill:focus {
     max-width: 40rem;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 3rem;
+}
+
+.empty-watchlist {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #6B7280;
 }

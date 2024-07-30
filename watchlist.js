@@ -19,7 +19,7 @@ async function fetchMovieDetails(id) {
     }
 }
 
-function createMovieElement(movie) {
+function createMovieElement(movie, addSeparator) {
     /* 
     This function handles creating the HTML for each object within the
     local storage in a suitable format similar to the search results in index.js.
@@ -52,8 +52,15 @@ function createMovieElement(movie) {
                 </div>
             </div>
         </div>
-        <hr class="seperator">
+        
     `;
+
+    if (addSeparator) {
+        const separator = document.createElement('hr');
+        separator.classList.add('separator');
+        movieElement.appendChild(separator);
+    }
+
     return movieElement;
 }
 
@@ -68,16 +75,18 @@ async function renderWatchlist() {
     const savedMovies = JSON.parse(localStorage.getItem('savedMovies')) || [];
     
     if (savedMovies.length === 0) {
-        watchlistContainer.innerHTML = '<p class="empty-watchlist">Your watchlist is empty</p>';
+        watchlistContainer.innerHTML = '<h2 class="empty-watchlist inter">Your watchlist is empty</h2>';
         return;
     }
 
     watchlistContainer.innerHTML = ''; // Clear existing content
 
-    for (const movieId of savedMovies) {
+    for (let i = 0; i < savedMovies.length; i++) {
+        const movieId = savedMovies[i];
         const movieDetails = await fetchMovieDetails(movieId);
         if (movieDetails) {
-            const movieElement = createMovieElement(movieDetails);
+            // Pass true if not the last element, false otherwise
+            const movieElement = createMovieElement(movieDetails, i !== savedMovies.length - 1);
             watchlistContainer.appendChild(movieElement);
         }
     }
